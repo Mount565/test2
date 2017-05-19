@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*
 
 
-import EMC as emc
 import time
-import tushare as ts
+
 import pandas as pd
+import tushare as ts
 
 # maybe you want to change year and season
 cur_year = 2017
@@ -23,7 +23,7 @@ gross_profit_dict = {'20': 2, '30': 1, '40': 1, '60': 1, '70': 1, '80': 1}
 net_profit_growth_dict = {'30': 1, '50': 2, '80': 1, '100': 1, '140': 1, '160': 1, '180': 1, '200': 1, '240': 1,
                           '280': 1}
 # 营业收入同比增长
-rev_profit_growth_dict = {'10': 1, '20': 1, '30': 1, '40':2, '50': 1, '80': 1, '100': 1, '140': 1, '160': 1, '180': 1,
+rev_profit_growth_dict = {'10': 1, '20': 1, '30': 1, '40':2, '50': 1, '80': 1, '100': 2, '140': 1, '160': 1, '180': 1,
                           '200': 1, '240': 1, '280': 1}
 
 # reservedPerShare
@@ -97,8 +97,8 @@ def do_filter():
     # return res
 
 
-emc.saveStockBasic()
-emc.getStockLatestIndicator("")
+EMC.saveStockBasic()
+EMC.getStockLatestIndicator("")
 #emc.getStockLatestIndicator("stock_basic_20170328.csv")
 save_forecast_data()
 
